@@ -1,62 +1,94 @@
 package com.alpha.work1;
 
-class Book {
+public class Book {
 
-    private int ID = 1234;
-    private String name = "Java for 21 days";
-    private String author = "A.Gretsev";
-    private String publisher = "alfa";
-    private int year = 2020;
-    private int pages = 10000;
-    private double cost = 99.99;
+    private int id;
+    private String name;
+    private String author;
+    private String publisher;
+    private int year;
+    private int pages;
+    private double cost;
 
-    public int getID(){
-        return  ID;
-    }
-    public void setID(int ID){
-        this.ID = ID;
+    public Book(String name, String author, String publisher) {
+        this(name,author,publisher, 1501,0,20.2);
+       /*
+       this.name = name;
+       this.author = author;
+       this.publisher = publisher;
+        */
     }
 
-    public String getName(){
-        return  name;
-    }
-    public void setName(String name){
+    public Book(String name, String author, String publisher, int year, int pages, double cost) {
         this.name = name;
-    }
-
-    public String getAuthor(){
-        return  author;
-    }
-    public void setAuthor(String author){
         this.author = author;
-    }
-
-    public String getPublisher(){
-        return  publisher;
-    }
-    public void setPublisher(String publisher){
         this.publisher = publisher;
-    }
-
-    public int getYear(){
-        return  year;
-    }
-    public void setYear(int year){
         this.year = year;
-    }
-
-    public int getPages(){
-        return  pages;
-    }
-    public void setPages(int pages){
         this.pages = pages;
-    }
-
-    public double getPCost(){
-        return  cost;
-    }
-    public void setPCost(double cost){
         this.cost = cost;
     }
 
+    public Book() {
+        this("Cats","Horov","PP", 2000,326,12.4);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void setPages(int pages) {
+        this.pages = pages;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
+    public void viewbook(){
+        System.out.println("Name " + name + ", author " + author + ", publisher " + publisher + ", year " + year + ", pages " + pages + ", cost " + cost);
+    }
 }
